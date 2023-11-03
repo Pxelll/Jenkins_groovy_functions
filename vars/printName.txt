@@ -1,4 +1,0 @@
-Example:
-    printName.printar_nome "adam"
-
-    "Nesse exemplo ira printar o nome adam"
