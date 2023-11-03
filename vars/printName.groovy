@@ -1,2 +1,3 @@
-def printar_nome(name)
+def printar_nome(name){
     echo "${name}"
+}
