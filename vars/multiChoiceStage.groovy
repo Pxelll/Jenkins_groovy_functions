@@ -9,7 +9,9 @@ def call(){
         stages{
             stage("PROD_ENVIRONMENT"){
                 when{
-                    choice name: "ENVIRONMENT", value: "prod"
+                    expression {
+                        params.ENVIRONMENT == "prod"
+                    }
                 }
                 steps{
                         echo "${ENVIRONMENT} STARTED!"
@@ -17,7 +19,9 @@ def call(){
             }
             stage("DEV_ENVIRONMENT"){
                 when{
-                    choice name: "ENVIRONMENT", value: "dev"
+                    expression {
+                        params.ENVIRONMENT == "dev"
+                    }
                 }
                 steps{
                         echo "${ENVIRONMENT} STARTED!"
@@ -25,7 +29,9 @@ def call(){
             }
             stage("NO_ENVIRONMENT"){
                 when{
-                    choice name: "ENVIRONMENT", value: "none"
+                    expression {
+                        params.ENVIRONMENT == "none"
+                    }
                 }
                 steps{
                         echo "No environment!"
