@@ -1,6 +1,5 @@
 def call(String choice){
     if (choice == "prod"){
-        parameters { choice(name: 'CHOICES', choices: ['prod', 'dev', 'none'], description: 'Select environment') }
         pipeline {
             agent any
 
