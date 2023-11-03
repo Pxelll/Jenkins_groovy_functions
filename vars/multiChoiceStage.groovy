@@ -14,7 +14,7 @@ def call(){
                     }
                 }
                 steps{
-                        echo "${ENVIRONMENT} STARTED!"
+                        echo "${params.ENVIRONMENT} STARTED!"
                 }
             }
             stage("DEV_ENVIRONMENT"){
@@ -24,7 +24,7 @@ def call(){
                     }
                 }
                 steps{
-                        echo "${ENVIRONMENT} STARTED!"
+                        echo "${params.ENVIRONMENT} STARTED!"
                 }
             }
             stage("NO_ENVIRONMENT"){
