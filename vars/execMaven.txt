@@ -1,0 +1,2 @@
+Aqui ao invez de "echo" era suposto a ser "mvn" mas o meu jenkins
+esta bugado e nao consegui instalar o maven na minhas instancia
